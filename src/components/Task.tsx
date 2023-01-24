@@ -1,9 +1,12 @@
 import React from "react";
 import "./Task.css";
+import { TaskType } from "../models/Task";
 
-type TaskProps = {};
+type TaskProps = {
+  task: TaskType;
+};
 
-export const Task = ({}: TaskProps) => {
+export const Task = ({ task }: TaskProps) => {
   return (
     <div className="task-container">
       <div className="task-content">
@@ -11,7 +14,7 @@ export const Task = ({}: TaskProps) => {
           <input type="checkbox" checked={false} />
           <span className="checkmark"></span>
         </label>
-        <p>"Titre de la tâche"</p>
+        <p>{task.title}</p>
       </div>
       <div className="task-actions">
         <button onClick={() => console.log("edit")}>Edit</button>
