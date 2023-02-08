@@ -19,6 +19,10 @@ export const TaskFormModal = ({
     initialValues?.description ?? undefined
   );
 
+    useEffect(() => {
+      setTitle(initialValues?.title);
+      setDescription(initialValues?.description);
+    } , [initialValues]);
   // Use a hook to listen to the initial values changes here
 
   if (!show) return null;
@@ -29,7 +33,7 @@ export const TaskFormModal = ({
         <button
           className="close-btn"
           type="button"
-          onClick={() => "The modal should close iteself"}
+          onClick={() => handleClose()}
         >
           X
         </button>
@@ -60,7 +64,7 @@ export const TaskFormModal = ({
           </label>
           <div className="form-actions">
             <button type="submit">Enregistrer</button>
-            <button onClick={() => "The modal should close iteself"}>
+            <button onClick={() => handleClose()}>
               Annuler
             </button>
           </div>

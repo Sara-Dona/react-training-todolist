@@ -8,7 +8,7 @@ type HeaderProps  ={ //creacion de un props con una llave y valor (props=propied
 export const Header =({title}:HeaderProps) => {
     return (
 <div className="header">
- <h1>{title}</h1>  {/* //definir los componentes en etiquetas los conrchetes de bichote {y la plabra adentro se llama interpolacion, es para llamar a la componente funcional} */}
+ <h1>{title}</h1>  {/* //definir los componentes en etiquetas con corchetes de bichote {y la palabra adentro se llama interpolacion, es para llamar a la componente funcional} */}
 </div>);
 }
 
