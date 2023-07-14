@@ -25,3 +25,4 @@ export const Task = ({ task, deleteTask, editTask}: TaskProps) => {
     </div>
   );
 };
+
